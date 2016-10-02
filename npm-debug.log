@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-ui-bootstrap' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'angular-ui-bootstrap', null ]
+6 verbose cache add name=undefined spec="angular-ui-bootstrap" args=["angular-ui-bootstrap",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'angular-ui-bootstrap',
+7 verbose parsed url   path: 'angular-ui-bootstrap',
+7 verbose parsed url   href: 'angular-ui-bootstrap' }
+8 silly lockFile f6770473-angular-ui-bootstrap angular-ui-bootstrap
+9 verbose lock angular-ui-bootstrap /home/julien/.npm/f6770473-angular-ui-bootstrap.lock
+10 silly lockFile f6770473-angular-ui-bootstrap angular-ui-bootstrap
+11 silly lockFile f6770473-angular-ui-bootstrap angular-ui-bootstrap
+12 verbose addNamed [ 'angular-ui-bootstrap', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile f47e147d-angular-ui-bootstrap angular-ui-bootstrap@
+15 verbose lock angular-ui-bootstrap@ /home/julien/.npm/f47e147d-angular-ui-bootstrap.lock
+16 silly addNameRange { name: 'angular-ui-bootstrap', range: '*', hasData: false }
+17 verbose url raw angular-ui-bootstrap
+18 verbose url resolving [ 'https://registry.npmjs.org/', './angular-ui-bootstrap' ]
+19 verbose url resolved https://registry.npmjs.org/angular-ui-bootstrap
+20 info trying registry request attempt 1 at 12:27:10
+21 http GET https://registry.npmjs.org/angular-ui-bootstrap
+22 http 200 https://registry.npmjs.org/angular-ui-bootstrap
+23 silly registry.get cb [ 200,
+23 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly registry.get     etag: '"5NRW4YK6AQ26TMNSM3GY79FL9"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     'content-length': '68827',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     date: 'Sun, 02 Oct 2016 10:27:10 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     age: '0',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-lhr6331-LHR',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1475404030.352128,VS0,VE254',
+23 silly registry.get     vary: 'Accept-Encoding' } ]
+24 silly addNameRange number 2 { name: 'angular-ui-bootstrap', range: '*', hasData: true }
+25 silly addNameRange versions [ 'angular-ui-bootstrap',
+25 silly addNameRange   [ '0.12.1',
+25 silly addNameRange     '0.13.0',
+25 silly addNameRange     '0.13.1',
+25 silly addNameRange     '0.13.2',
+25 silly addNameRange     '0.13.3',
+25 silly addNameRange     '0.13.4',
+25 silly addNameRange     '0.14.0',
+25 silly addNameRange     '0.14.1',
+25 silly addNameRange     '0.14.2',
+25 silly addNameRange     '0.14.3',
+25 silly addNameRange     '1.0.0',
+25 silly addNameRange     '1.0.1',
+25 silly addNameRange     '1.0.3',
+25 silly addNameRange     '1.1.0',
+25 silly addNameRange     '1.1.1',
+25 silly addNameRange     '1.1.2',
+25 silly addNameRange     '1.2.0',
+25 silly addNameRange     '1.2.1',
+25 silly addNameRange     '1.2.2',
+25 silly addNameRange     '1.2.4',
+25 silly addNameRange     '1.2.5',
+25 silly addNameRange     '1.3.0',
+25 silly addNameRange     '1.3.1',
+25 silly addNameRange     '1.3.2',
+25 silly addNameRange     '1.3.3',
+25 silly addNameRange     '2.0.0',
+25 silly addNameRange     '2.0.1',
+25 silly addNameRange     '2.0.2',
+25 silly addNameRange     '2.1.0',
+25 silly addNameRange     '2.1.1',
+25 silly addNameRange     '2.1.2',
+25 silly addNameRange     '2.1.3',
+25 silly addNameRange     '2.1.4' ] ]
+26 verbose addNamed [ 'angular-ui-bootstrap', '2.1.4' ]
+27 verbose addNamed [ '2.1.4', '2.1.4' ]
+28 silly lockFile 007ee122-angular-ui-bootstrap-2-1-4 angular-ui-bootstrap@2.1.4
+29 verbose lock angular-ui-bootstrap@2.1.4 /home/julien/.npm/007ee122-angular-ui-bootstrap-2-1-4.lock
+30 silly lockFile 5f0705cf-p-angular-ui-bootstrap-2-1-4-tgz https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.4.tgz
+31 verbose lock https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.4.tgz /home/julien/.npm/5f0705cf-p-angular-ui-bootstrap-2-1-4-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.4.tgz',
+32 verbose addRemoteTarball   '251e6197985a7564c34fbfdae46b4b648693689d' ]
+33 silly lockFile 5f0705cf-p-angular-ui-bootstrap-2-1-4-tgz https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.4.tgz
+34 silly lockFile 5f0705cf-p-angular-ui-bootstrap-2-1-4-tgz https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.4.tgz
+35 silly lockFile 007ee122-angular-ui-bootstrap-2-1-4 angular-ui-bootstrap@2.1.4
+36 silly lockFile 007ee122-angular-ui-bootstrap-2-1-4 angular-ui-bootstrap@2.1.4
+37 silly lockFile f47e147d-angular-ui-bootstrap angular-ui-bootstrap@
+38 silly lockFile f47e147d-angular-ui-bootstrap angular-ui-bootstrap@
+39 error Error: EACCES, mkdir '/home/julien/tmp/npm-4900-DUWqO732'
+39 error  { [Error: EACCES, mkdir '/home/julien/tmp/npm-4900-DUWqO732']
+39 error   errno: 3,
+39 error   code: 'EACCES',
+39 error   path: '/home/julien/tmp/npm-4900-DUWqO732' }
+40 error Please try running this command again as root/Administrator.
+41 error System Linux 4.4.0-38-generic
+42 error command "/usr/bin/nodejs" "/usr/local/bin/npm" "install" "angular-ui-bootstrap"
+43 error cwd /home/julien/myHsDeck
+44 error node -v v0.10.25
+45 error npm -v 1.3.10
+46 error path /home/julien/tmp/npm-4900-DUWqO732
+47 error code EACCES
+48 error errno 3
+49 error stack Error: EACCES, mkdir '/home/julien/tmp/npm-4900-DUWqO732'
+50 verbose exit [ 3, true ]
