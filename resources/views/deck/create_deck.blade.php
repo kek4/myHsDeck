@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 @section('css')
    @parent
 @endsection
@@ -7,51 +7,24 @@
    <script src="{{ asset('angularJS/DeckController.js') }}"></script>
 @endsection
 @section('content')
-   <div id="content" ng-controller="DeckController">
-      <uib-tabset active="activeJustified" justified="true">
-       <uib-tab index="0" heading="Paladin">
+   #{ class }#
+   #{ deck.totalCards }#
+   <div id="classController" data-class="{{ $class }}">
+      <uib-tabset active="active">
+       <uib-tab index="0" heading="{{ $class }}">
           <div class="row">
-            <div class="col-md-3" ng-repeat="card in deckpaladin" ng-show="card.type != 'Hero'" >
-                 <img src="#{ card.img }#" alt="#{ card.name }#">
-                 <h4>#{ card.text }#</h4>
+            <div class="col-md-3" ng-repeat="card in classcards" ng-if="card.type != 'Hero'">
+                 <a href="" ng-click="addCard(card)"><img src="#{ card.img }#" alt="#{ card.name }#" ng-class="selectable(card) ? 'not-selectable' : ''"></a>
             </div>
           </div>
-             <pagination
-             ng-model="data.currentPage"
-             total-items="paladin.length"
-             max-size="maxSize"
-             boundary-links="true">
-          </pagination>
        </uib-tab>
-       <uib-tab index="1" heading="Mage">
+       <uib-tab index="1" heading="Neutre">
           <div class="row">
-            <div class="col-md-3" ng-repeat="card in deckmage" ng-show="card.type != 'Hero'" >
-                 <img src="#{ card.img }#" alt="#{ card.name }#">
-                 <h4>#{ card.name }#</h4>
+            <div class="col-md-3" ng-repeat="card in neutralcards" ng-if="card.type != 'Hero' && !card.hasOwnProperty('playerClass')">
+                 <a href="" ng-click="addCard(card)"><img src="#{ card.img }#" alt="#{ card.type }#" ng-class="selectable(card) ? 'not-selectable' : ''"></a>
             </div>
           </div>
-          {{-- <pagination
-            ng-model="currentPage"
-            total-items="todos.length"
-            max-size="maxSize"
-            boundary-links="true">
-          </pagination> --}}
-       </uib-tab>
-       <uib-tab index="2" heading="Priest">
-          <div class="row">
-            <div class="col-md-3" ng-repeat="card in deckpriest" ng-show="card.type != 'Hero'" >
-                 <img src="#{ card.img }#" alt="#{ card.name }#">
-                 <h4>#{ card.name }#</h4>
-            </div>
-          </div>
-          {{-- <pagination
-            ng-model="currentPage"
-            total-items="todos.length"
-            max-size="maxSize"
-            boundary-links="true">
-          </pagination> --}}
        </uib-tab>
      </uib-tabset>
-
    </div>
 @endsection

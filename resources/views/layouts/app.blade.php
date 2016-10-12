@@ -11,9 +11,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="/css/app.css" rel="stylesheet">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="{{ asset('plugins/node-waves/waves.css') }}" rel="stylesheet">
+    <!-- Animation Css -->
+    <link href="{{ asset('plugins/animate-css/animate.css') }}" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -24,22 +33,6 @@
 <body>
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-            </div>
-
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
@@ -77,34 +70,30 @@
             </div>
         </div>
     </nav>
-
-    @if (session('success'))
-      <div class="container">
-         <div class="alert alert-success">
-            {{ session('success') }}
-         </div>
-      </div>
-    @endif
-
-    @if (session('error'))
-      <div class="container">
-         <div class="alert alert-danger">
-            {{ session('error') }}
-         </div>
-      </div>
-    @endif
-
     @yield('content')
 
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
-
 @section('js')
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
-  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
-  <script src="{{ asset('angularJS/AppController.js') }}"></script>
+   <!-- Jquery Core Js -->
+   <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+
+   <!-- Bootstrap Core Js -->
+   <script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
+
+   <!-- Waves Effect Plugin Js -->
+   <script src="{{ asset('plugins/node-waves/waves.js') }}"></script>
+
+   <!-- Validation Plugin Js -->
+   <script src="{{ asset('plugins/jquery-validation/jquery.validate.js') }}"></script>
+
+   <!-- Custom Js -->
+   <script src="{{ asset('js/admin.js') }}"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.4.js"></script>
+   <script src="{{ asset('angularJS/AppController.js') }}"></script>
+   <script src="{{ asset('js/login.js') }}"></script>
 @show
 </body>
 </html>

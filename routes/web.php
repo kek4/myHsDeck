@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 //Log
@@ -26,6 +26,8 @@ Route::get('/callback', 'FacebookAuthController@callback');
 Route::get('/home', 'HomeController@index');
 
 Route::group(['prefix' => 'deck'], function(){
-   Route::get('/list', 'DeckController@toList')->name('deck.list');
-   Route::get('/class-list/{class}/{mode}', 'DeckController@listJson')->name('deck.classlist');
+   Route::get('/list/{class}', 'DeckController@toList')->name('deck.list');
+   Route::get('/class-list/{class}/{mode}', 'DeckController@listClassJson')->name('deck.classlist');
+   Route::get('/neutral-list', 'DeckController@listNeutralJson')->name('deck.neutrallist');
+   Route::post('/save', 'DeckController@save')->name('deck.save');
 });

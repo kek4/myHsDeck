@@ -1,69 +1,64 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                                    Forgot Your Password?
-                                </a>
-                                <a href="facebook">FB Login</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+   <div class="login-page ls-closed">
+      <div class="login-box">
+         <div class="logo">
+            <a href="javascript:void(0);">Admin<b>BSB</b></a>
+            <small>Admin BootStrap Based - Material Design</small>
+         </div>
+         <div class="card">
+            <div class="body">
+               <form id="sign_in" method="POST" role="form" novalidate="novalidate" action="{{ url('/login') }}">
+                  {{ csrf_field() }}
+                  <div class="msg">Bienvenue</div>
+                  <div class="input-group {{ $errors->has('email') ? 'error' : '' }}">
+                     <span class="input-group-addon">
+                        <i class="material-icons">person</i>
+                     </span>
+                     <div class="form-line">
+                        <input id="email" class="form-control" name="email" placeholder="email" value="{{ old('email') }}" required="" autofocus="" aria-required="true" type="email">
+                        @if ($errors->has('email'))
+                           <span class="help-block">
+                              <strong>{{ $errors->first('email') }}</strong>
+                           </span>
+                        @endif
+                     </div>
+                  </div>
+                  <div class="input-group {{ $errors->has('password') ? 'error' : '' }}">
+                     <span class="input-group-addon">
+                        <i class="material-icons">lock</i>
+                     </span>
+                     <div class="form-line">
+                        <input id="password" class="form-control" name="password" placeholder="Password" required="" aria-required="true" type="password">
+                        @if ($errors->has('password'))
+                           <span class="help-block">
+                              <strong>{{ $errors->first('password') }}</strong>
+                           </span>
+                        @endif
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-8 p-t-5">
+                        <input name="remember" id="rememberme" class="filled-in chk-col-pink" type="checkbox">
+                        <label for="remember">Remember Me</label>
+                     </div>
+                     <div class="col-xs-4">
+                        <button class="btn btn-block bg-pink waves-effect" type="submit">Login</button>
+                     </div>
+                  </div>
+                  <a href="facebook">FB Login</a>
+                  <div class="row m-t-15 m-b--20">
+                     <div class="col-xs-6">
+                        <a href="{{ url('/register') }}">Register</a>
+                     </div>
+                     <div class="col-xs-6 align-right">
+                        <a href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+                     </div>
+                  </div>
+               </form>
             </div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>
+   </div>
 @endsection
